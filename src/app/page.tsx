@@ -8,7 +8,7 @@ export default function Home() {
         <div className="flex items-center gap-3">
           {/* Desktop logo */}
           <div className="hidden sm:flex items-center gap-3">
-            <Image src="/logo.png" alt="Beijing Xnavor logo" width={220} height={60} className="object-contain" />
+            <Image src="/logo.svg" alt="Beijing Xnavor logo" width={220} height={60} className="object-contain" />
             <div>
               <div className="text-lg font-semibold">北京先航科技有限公司</div>
               <div className="text-xs text-slate-500 dark:text-slate-400">Beijing Xnavor Technology Company Limited</div>
@@ -17,7 +17,7 @@ export default function Home() {
 
           {/* Mobile icon */}
           <div className="flex sm:hidden items-center gap-2">
-            <Image src="/icon.png" alt="Xnavor icon" width={40} height={40} className="rounded-md" />
+            <Image src="/icon.svg" alt="Xnavor icon" width={40} height={40} className="rounded-md" />
             <div>
               <div className="text-sm font-semibold">Beijing Xnavor</div>
             </div>
@@ -55,7 +55,7 @@ export default function Home() {
 
           <div className="order-first md:order-last">
             <div className="rounded-xl bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 p-6 shadow">
-              <Image src="/logo.png" alt="Beijing Xnavor" width={420} height={120} className="dark:invert object-contain" />
+              <Image src="/logo.svg" alt="Beijing Xnavor" width={420} height={120} className="dark:invert object-contain" />
               <div className="mt-4 grid grid-cols-1 gap-3">
                 <div className="p-4 bg-white dark:bg-slate-800 rounded-md border border-slate-100 dark:border-slate-700">
                   <div className="text-sm font-semibold">Featured case</div>
