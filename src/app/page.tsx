@@ -6,12 +6,21 @@ export default function Home() {
     <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100">
       <header className="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-md bg-black/5 dark:bg-white/6 flex items-center justify-center font-semibold">
-            X
+          {/* Desktop logo */}
+          <div className="hidden sm:flex items-center gap-3">
+            <Image src="/logo.svg" alt="Beijing Xnavor logo" width={220} height={60} className="object-contain" />
+            <div>
+              <div className="text-lg font-semibold">北京先航科技有限公司</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">Beijing Xnavor Technology Company Limited</div>
+            </div>
           </div>
-          <div>
-            <div className="text-lg font-semibold">Beijing Xnavor</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">Xnavor Technology Co., Ltd.</div>
+
+          {/* Mobile icon */}
+          <div className="flex sm:hidden items-center gap-2">
+            <Image src="/icon.svg" alt="Xnavor icon" width={40} height={40} className="rounded-md" />
+            <div>
+              <div className="text-sm font-semibold">Beijing Xnavor</div>
+            </div>
           </div>
         </div>
         <nav className="flex items-center gap-4">
@@ -46,7 +55,7 @@ export default function Home() {
 
           <div className="order-first md:order-last">
             <div className="rounded-xl bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 p-6 shadow">
-              <Image src="/next.svg" alt="placeholder" width={420} height={120} className="dark:invert" />
+              <Image src="/logo.svg" alt="Beijing Xnavor" width={420} height={120} className="dark:invert object-contain" />
               <div className="mt-4 grid grid-cols-1 gap-3">
                 <div className="p-4 bg-white dark:bg-slate-800 rounded-md border border-slate-100 dark:border-slate-700">
                   <div className="text-sm font-semibold">Featured case</div>
@@ -65,7 +74,7 @@ export default function Home() {
         <section id="resources" className="mt-12">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">Curated Resources</h2>
-            <Link href="#" className="text-sm text-slate-500 hover:underline">View all</Link>
+            <Link href="/resources" className="text-sm text-slate-500 hover:underline">View all</Link>
           </div>
 
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -73,7 +82,7 @@ export default function Home() {
               <div className="text-sm font-semibold">Toolkit</div>
               <div className="mt-2 text-sm text-slate-500 dark:text-slate-400">A selection of headless tools we recommend for storefronts and CMS.</div>
               <div className="mt-4">
-                <a href="#" className="text-sm text-sky-600 hover:underline">Open toolkit →</a>
+                <a href="/resources/toolkit" className="text-sm text-sky-600 hover:underline">Open toolkit →</a>
               </div>
             </article>
 
@@ -81,7 +90,7 @@ export default function Home() {
               <div className="text-sm font-semibold">Integrations</div>
               <div className="mt-2 text-sm text-slate-500 dark:text-slate-400">Examples connecting headless CMS, commerce and shipping providers.</div>
               <div className="mt-4">
-                <a href="#" className="text-sm text-sky-600 hover:underline">Explore integrations →</a>
+                <a href="/resources/integrations" className="text-sm text-sky-600 hover:underline">Explore integrations →</a>
               </div>
             </article>
 
@@ -89,7 +98,7 @@ export default function Home() {
               <div className="text-sm font-semibold">Case studies</div>
               <div className="mt-2 text-sm text-slate-500 dark:text-slate-400">Real results from cross-border stores and headless migrations.</div>
               <div className="mt-4">
-                <a href="#" className="text-sm text-sky-600 hover:underline">Read case studies →</a>
+                <a href="/resources/case-studies" className="text-sm text-sky-600 hover:underline">Read case studies →</a>
               </div>
             </article>
           </div>
@@ -99,12 +108,12 @@ export default function Home() {
         <section id="articles" className="mt-12">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">Latest Articles</h2>
-            <Link href="#" className="text-sm text-slate-500 hover:underline">See all</Link>
+            <Link href="/posts" className="text-sm text-slate-500 hover:underline">See all</Link>
           </div>
 
           <ul className="mt-6 grid gap-4">
             <li className="p-4 rounded-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800">
-              <a href="#" className="flex items-center justify-between gap-4">
+              <a href="/posts/building-headless" className="flex items-center justify-between gap-4">
                 <div>
                   <div className="text-sm font-semibold">Building a headless storefront in 2026</div>
                   <div className="text-xs text-slate-500 dark:text-slate-400">March 10, 2026 — by Xnavor team</div>
@@ -114,7 +123,7 @@ export default function Home() {
             </li>
 
             <li className="p-4 rounded-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800">
-              <a href="#" className="flex items-center justify-between gap-4">
+              <a href="/posts/cross-border-logistics" className="flex items-center justify-between gap-4">
                 <div>
                   <div className="text-sm font-semibold">Cross-border logistics essentials</div>
                   <div className="text-xs text-slate-500 dark:text-slate-400">Feb 20, 2026 — by Xnavor</div>
